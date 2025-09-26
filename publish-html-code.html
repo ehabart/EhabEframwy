@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="ar">
+<head>
+    <meta charset="UTF-8">
+    <title>نشر كود HTML</title>
+    <style>
+        body { font-family: Arial, sans-serif; direction: rtl; background: #f7f7f7; padding: 40px;}
+        h1 { color: #444; }
+        textarea { width: 100%; height: 200px; font-family: monospace; font-size: 16px; margin-bottom: 20px; }
+        button { padding: 10px 25px; font-size: 16px; }
+        .output { background: #fff; border: 1px solid #ddd; padding: 20px; margin-top: 20px; min-height: 100px; }
+    </style>
+</head>
+<body>
+    <h1>نشر كود HTML</h1>
+    <label for="codeInput">أدخل كود HTML هنا:</label>
+    <textarea id="codeInput" placeholder="اكتب أو الصق كود HTML هنا"></textarea>
+    <br>
+    <button onclick="publishCode()">نشر الكود</button>
+    <h2>النتيجة:</h2>
+    <div class="output" id="result"></div>
+
+    <script>
+        function publishCode() {
+            var htmlCode = document.getElementById('codeInput').value;
+            document.getElementById('result').innerHTML = htmlCode;
+        }
+    </script>
+</body>
+</html>
